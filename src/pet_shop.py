@@ -62,4 +62,11 @@ def customer_can_afford_pet(customer, new_pet):
     else:
         return False
 
+def sell_pet_to_customer(pet_shop, pet, customer):
+    add_or_remove_cash(pet_shop, pet['price']) #add petshop cash
+    add_pet_to_customer(customer, pet) #add pet to customer's list
+    remove_customer_cash(customer, pet['price']) #remove cash from customer
+    remove_pet_by_name(pet_shop, pet)#Remove pet from list
+    increase_pets_sold(pet_shop, 1)#Increse total sales
+
 
