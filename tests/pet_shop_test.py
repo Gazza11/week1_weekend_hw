@@ -74,42 +74,45 @@ class TestPetShop(unittest.TestCase):
             },
             "name": "Camelot of Pets"
         }
-
+#1
     def test_pet_shop_name(self):
         name = get_pet_shop_name(self.cc_pet_shop)
         self.assertEqual("Camelot of Pets", name)
 
-    
+#2
     def test_total_cash(self):
         sum = get_total_cash(self.cc_pet_shop)
         self.assertEqual(1000, sum)
 
-
+#3
     def test_add_or_remove_cash__add(self):
         add_or_remove_cash(self.cc_pet_shop,10) 
         cash = get_total_cash(self.cc_pet_shop)
         self.assertEqual(1010, cash)
 
+#4
     def test_add_or_remove_cash__remove(self):
         add_or_remove_cash(self.cc_pet_shop,-10)
         cash = get_total_cash(self.cc_pet_shop)
         self.assertEqual(990, cash)
 
+#5
     def test_pets_sold(self):
         sold = get_pets_sold(self.cc_pet_shop)
         self.assertEqual(0, sold)
 
-    
+#6
     def test_increase_pets_sold(self):
         increase_pets_sold(self.cc_pet_shop,2)
         sold = get_pets_sold(self.cc_pet_shop)
         self.assertEqual(2, sold)
 
+#7
     def test_stock_count(self):
         count = get_stock_count(self.cc_pet_shop)
         self.assertEqual(6, count)
 
-    @unittest.skip("delete this line to run the test")
+#8
     def test_all_pets_by_breed__found(self):
         pets = get_pets_by_breed(self.cc_pet_shop, "British Shorthair")
         self.assertEqual(2, len(pets))
