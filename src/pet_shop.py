@@ -36,4 +36,9 @@ def remove_pet_by_name(pet_shop, name):
     for pet in pet_shop['pets']:
         if pet['name'] == name:
             pet_shop['pets'].remove(pet)
-            
+
+
+def add_pet_to_stock(pet_shop, new_pet):
+    return pet_shop['pets'].append(new_pet)
+
+
