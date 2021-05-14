@@ -24,5 +24,7 @@ def get_pets_by_breed(pet_shop, breed_input):
     for pet in pet_shop['pets']:
         if pet['breed'] == breed_input:
             amount.append(breed_input)
+        
     
     return amount
+
