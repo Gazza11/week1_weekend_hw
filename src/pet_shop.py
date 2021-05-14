@@ -68,6 +68,8 @@ def sell_pet_to_customer(pet_shop, new_pet, customer):
     #If pet not found skip below
     if new_pet == None:
         return None
+    elif customer['cash'] < new_pet['price']:
+        return None
     else:
         add_pet_to_customer(customer, new_pet) #add pet to customer's list
         add_or_remove_cash(pet_shop, new_pet['price']) #add petshop cash
