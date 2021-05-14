@@ -25,6 +25,9 @@ def get_pets_by_breed(pet_shop, breed_input):
         if pet['breed'] == breed_input:
             amount.append(breed_input)
         
-    
     return amount
 
+def find_pet_by_name(pet_shop, name):
+    for pet in pet_shop['pets']:
+        if pet['name'] == name:
+            return pet
